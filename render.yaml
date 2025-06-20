@@ -1,10 +1,9 @@
 services:
   - type: web
-    name: api_v1
-    env: python
+    name: mi-api-fastapi
+    runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
-    plan: free
     envVars:
       - key: PYTHON_VERSION
-        value: "3.11"
+        value: 3.11
